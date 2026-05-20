@@ -1,0 +1,402 @@
+﻿@media screen and (min-width: 37.5em) {
+    .t-34 {
+        font-size:1.125rem;
+        line-height: 1.55556
+    }
+
+    .t-34 .b-text h2+h3 {
+        margin-top: -1rem;
+        padding-bottom: 1rem
+    }
+
+    .t-34 .b-text h3 {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        padding-bottom: .375rem
+    }
+
+    .t-34 .b-text ol,.t-34 .b-text p {
+        padding-bottom: 1.125rem
+    }
+
+    .t-34 .b-text ol {
+        margin-left: 1.25rem
+    }
+
+    .t-34 .b-text ol li {
+        padding-left: 2.1875rem
+    }
+
+    .t-34 .b-text ul {
+        padding-bottom: 1.125rem;
+        margin-left: 1.25rem
+    }
+
+    .t-34 .b-text ul li {
+        padding-left: 2.1875rem
+    }
+
+    .t-34 .b-text blockquote {
+        font-size: 1.3125rem;
+        line-height: 1.52381;
+        padding: 2rem 2rem 2.9375rem 4.6875rem
+    }
+
+    .t-34 .b-text blockquote:before {
+        max-height: 2.5rem
+    }
+
+    html[lang=ja] .t-34 .b-text blockquote:before {
+        left: -33px;
+        top: 40px;
+        max-height: 3.75rem;
+        font-size: 4rem
+    }
+
+    html[lang=ca] .t-34 .b-text blockquote:before,html[lang=el] .t-34 .b-text blockquote:before,html[lang=fr] .t-34 .b-text blockquote:before,html[lang=it] .t-34 .b-text blockquote:before,html[lang=lv] .t-34 .b-text blockquote:before,html[lang=no] .t-34 .b-text blockquote:before,html[lang=pt] .t-34 .b-text blockquote:before,html[lang=ru] .t-34 .b-text blockquote:before,html[lang=uk] .t-34 .b-text blockquote:before {
+        top: -5px;
+        left: 0;
+        max-height: 5.625rem
+    }
+
+    html[lang=cz] .t-34 .b-text blockquote:before,html[lang=de] .t-34 .b-text blockquote:before,html[lang=hr] .t-34 .b-text blockquote:before,html[lang=hu] .t-34 .b-text blockquote:before,html[lang=nl] .t-34 .b-text blockquote:before,html[lang=pl] .t-34 .b-text blockquote:before,html[lang=sk] .t-34 .b-text blockquote:before {
+        top: -45px;
+        left: 10px;
+        max-height: 8.125rem
+    }
+
+    .t-34 .b-text blockquote:before {
+        font-size: 6.875rem;
+        top: 30px
+    }
+
+    .t-34 .b-text blockquote+h1,.t-34 .b-text blockquote+h2,.t-34 .b-text blockquote+h3,.t-34 .b-text ol+h1,.t-34 .b-text ol+h2,.t-34 .b-text ol+h3,.t-34 .b-text p+h1,.t-34 .b-text p+h2,.t-34 .b-text p+h3,.t-34 .b-text ul+h1,.t-34 .b-text ul+h2,.t-34 .b-text ul+h3 {
+        padding-top: 1rem
+    }
+
+    .t-34 .blog.no-grid .item-head h2 {
+        font-size: 1.625rem;
+        line-height: 1.23077
+    }
+
+    .t-34 .blog.no-grid .wnd-private-content .item-head h2 .listing-data span:before {
+        font-size: 17px;
+        line-height: 32px;
+        margin-right: .75rem
+    }
+
+    .t-34 .blog.no-grid .item-perex blockquote,.t-34 .blog.no-grid .item-perex h1,.t-34 .blog.no-grid .item-perex h2,.t-34 .blog.no-grid .item-perex h3 {
+        font-size: 1.25rem;
+        line-height: 1.3
+    }
+
+    .t-34 .blog.grid .item-perex blockquote,.t-34 .blog.grid .item-perex h1,.t-34 .blog.grid .item-perex h2,.t-34 .blog.grid .item-perex h3 {
+        font-size: 1.375rem;
+        line-height: 1.18182
+    }
+
+    .t-34 .blog-headings.blog.no-grid .item-head h2 {
+        font-size: 1.625rem;
+        line-height: 1.23077
+    }
+
+    .t-34 .blog-headings.blog.no-grid .item.wnd-private-content .item-head h2 .listing-data span:before {
+        font-size: 17px;
+        line-height: 32px;
+        margin-right: .75rem
+    }
+
+    .t-34 .b-btn-l,.t-34 .wnd-replace-form-button {
+        font-size: 1.25rem;
+        line-height: 1.3
+    }
+
+    .t-34 .b-btn-file .b-btn-l:before {
+        font-size: 24px
+    }
+
+    .t-34 .b-btn-i-atc .b-btn-t:before {
+        font-size: 22px
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .t-34 .eshop-slider .product-text {
+        max-height:4.75rem
+    }
+}
+
+@media screen and (min-width: 56.25em) {
+    .t-34 {
+        font-size:1.25rem;
+        line-height: 1.6
+    }
+
+    .t-34 .b-text h1 {
+        font-size: 3.4375rem;
+        line-height: 1.16364;
+        padding-bottom: 1.875rem
+    }
+
+    .t-34 .b-text h1+h3 {
+        margin-top: -1.25rem
+    }
+
+    .t-34 .b-text h2 {
+        font-size: 2rem;
+        line-height: 1.375;
+        padding-bottom: 1rem
+    }
+
+    .t-34 .b-text h3 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding-bottom: .5rem
+    }
+
+    .t-34 .b-text blockquote {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding: 2.25rem 2.25rem 3.5rem 5.9375rem
+    }
+
+    .t-34 .b-text blockquote:before {
+        max-height: 4.0625rem
+    }
+
+    html[lang=ja] .t-34 .b-text blockquote:before {
+        left: -40px;
+        top: 45px;
+        max-height: 5rem;
+        font-size: 5rem
+    }
+
+    html[lang=ca] .t-34 .b-text blockquote:before,html[lang=el] .t-34 .b-text blockquote:before,html[lang=fr] .t-34 .b-text blockquote:before,html[lang=it] .t-34 .b-text blockquote:before,html[lang=lv] .t-34 .b-text blockquote:before,html[lang=no] .t-34 .b-text blockquote:before,html[lang=pt] .t-34 .b-text blockquote:before,html[lang=ru] .t-34 .b-text blockquote:before,html[lang=uk] .t-34 .b-text blockquote:before {
+        top: -15px;
+        left: -15px;
+        max-height: 7.5rem
+    }
+
+    html[lang=cz] .t-34 .b-text blockquote:before,html[lang=de] .t-34 .b-text blockquote:before,html[lang=hr] .t-34 .b-text blockquote:before,html[lang=hu] .t-34 .b-text blockquote:before,html[lang=nl] .t-34 .b-text blockquote:before,html[lang=pl] .t-34 .b-text blockquote:before,html[lang=sk] .t-34 .b-text blockquote:before {
+        top: -70px;
+        left: 10px;
+        max-height: 10rem
+    }
+
+    .t-34 .b-text blockquote:before {
+        font-size: 9.375rem
+    }
+
+    .t-34 .eshop-filter-category {
+        font-size: 1rem;
+        line-height: 1.125
+    }
+
+    .t-34 .eshop-grid .item-head h2 {
+        font-size: 1.125rem;
+        line-height: 1.44444
+    }
+
+    .t-34 .eshop-grid .product-price-comparative {
+        font-size: 1rem;
+        line-height: 1.5
+    }
+
+    .t-34 .eshop-slider .product-title {
+        font-size: 1.875rem;
+        line-height: 1.33333;
+        max-height: 4.875rem
+    }
+
+    .t-34 .eshop-slider .product-text {
+        font-size: 1.125rem;
+        line-height: 1.44444
+    }
+
+    .t-34 .eshop-slider .product-price {
+        font-size: 1.625rem;
+        line-height: 1.30769
+    }
+
+    .t-34 .eshop-slider .product-price-comparative {
+        font-size: 1.25rem;
+        line-height: 1.4
+    }
+
+    .t-34 .eshop-detail .product-title {
+        font-size: 2.0625rem;
+        line-height: 1.33333
+    }
+
+    .t-34 .eshop-detail .product-text {
+        font-size: 1.125rem;
+        line-height: 1.61111
+    }
+
+    .t-34 .eshop-detail .product-price {
+        font-size: 1.75rem;
+        line-height: 1.21429
+    }
+
+    .t-34 .eshop-detail .product-price.product-price-comparative {
+        font-size: 1.25rem;
+        line-height: 1.4
+    }
+
+    .t-34 .blog.no-grid .item-head h2 {
+        font-size: 1.875rem;
+        line-height: 1.2;
+        font-weight: 700
+    }
+
+    .t-34 .blog.no-grid .wnd-private-content .item-head h2 .listing-data span:before {
+        font-size: 20px;
+        line-height: 34px
+    }
+
+    .t-34 .blog.no-grid .item-perex {
+        font-size: 1.25rem;
+        line-height: 1.3
+    }
+
+    .t-34 .blog.no-grid .item-perex blockquote,.t-34 .blog.no-grid .item-perex h1,.t-34 .blog.no-grid .item-perex h2,.t-34 .blog.no-grid .item-perex h3 {
+        font-size: 1.5rem;
+        line-height: 1.16667
+    }
+
+    .t-34 .blog-headings.blog.no-grid .item-head h2 {
+        font-size: 1.875rem;
+        line-height: 1.2
+    }
+
+    .t-34 .blog-headings.blog.no-grid .item.wnd-private-content .item-head h2 .listing-data span:before {
+        font-size: 19px;
+        line-height: 35px;
+        margin-right: .875rem
+    }
+
+    .t-34 .s-bdh-t {
+        font-size: 3.5rem;
+        line-height: 1.25
+    }
+
+    .t-34 .mt {
+        font-size: 1.125rem;
+        line-height: 1.77778
+    }
+
+    .t-34 .mt .b-text h3 {
+        font-size: 1.25rem;
+        line-height: 1.5
+    }
+
+    .t-34 .mt .b-text h4 {
+        font-size: 1.125rem;
+        line-height: 1.55556
+    }
+
+    .t-34 .mt.mt-l .b-text h3 {
+        font-size: 1.375rem;
+        line-height: 1.45455
+    }
+
+    .t-34 .cart a,.t-34 .menu-item {
+        font-size: .90625rem;
+        font-weight: 400
+    }
+
+    .t-34 .cart a .cart-content-link:after {
+        font-size: 1.0625rem
+    }
+
+    .wnd-s-b .t-34 .search-bar-input {
+        font-size: .90625rem;
+        font-weight: 400
+    }
+
+    .wnd-s-b .t-34 .search-bar-submit {
+        font-family: WebnodeIcons;
+        font-size: 1rem;
+        font-weight: 500
+    }
+
+    .t-34 .s-hn.wnd-mt-classic .search-icon {
+        font-size: .90625rem
+    }
+
+    .t-34 .s-hn.wnd-mt-classic .search-icon:after {
+        font-size: 1rem
+    }
+
+    .t-34 .s-hn.wnd-mt-sliding .search-icon,.t-34 .s-hn.wnd-mt-sliding .search-icon:after {
+        line-height: 49px
+    }
+
+    .t-34 .wnd-mt-sidebar .search-icon {
+        font-size: .90625rem
+    }
+
+    .t-34 .wnd-mt-sidebar .search-icon-text {
+        letter-spacing: .0625rem;
+        text-transform: uppercase
+    }
+
+    .t-34 .wnd-mt-sidebar .search-icon:after {
+        font-size: 1rem;
+        line-height: 36px
+    }
+
+    .t-34 .menu-delimiters-doublepipe .cart,.t-34 .menu-delimiters-doublepipe ul.level-1>li>.menu-item,.t-34 .menu-delimiters-slash .cart,.t-34 .menu-delimiters-slash ul.level-1>li>.menu-item {
+        text-transform: uppercase;
+        letter-spacing: .04688rem
+    }
+
+    .t-34 .menu-delimiters-doublepipe ul.level-1>li.more>.menu-item>span:after,.t-34 .menu-delimiters-doublepipe ul.level-1>li.more>.menu-item>span:before,.t-34 .menu-delimiters-doublepipe ul.level-1>li>.menu-item>span:after,.t-34 .menu-delimiters-doublepipe ul.level-1>li>.menu-item>span:before {
+        height: .625rem;
+        bottom: 5px
+    }
+
+    .t-34 .menu-delimiters-doublepipe .cart a:after,.t-34 .menu-delimiters-doublepipe .cart a:before {
+        height: .625rem;
+        bottom: 22px
+    }
+
+    .t-34 ul.level-1>li>.mm-arrow:after {
+        top: -2px!important
+    }
+
+    .l-sidebar .t-34 .cart-block .cart a .cart-piece-count {
+        padding: .25rem .0625rem 0 0
+    }
+
+    .l-sidebar .t-34 .cart-block .cart a .cart-content-link:after {
+        font-size: 1.075rem;
+        margin: 0 0 0 .1875rem
+    }
+
+    .l-sidebar .t-34 #menu ul.level-3 .menu-item-text {
+        padding: 0 .1875rem
+    }
+
+    .t-34 .b-gal-t,.t-34 .b-img-t,.t-34 .pswp__caption {
+        font-size: 1rem;
+        line-height: 1.5
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .t-34 .eshop-grid .item-head h2 {
+        font-size:1.125rem;
+        line-height: 1.44444
+    }
+
+    .t-34 .eshop-slider .product-title {
+        font-size: 2rem;
+        line-height: 1.3125;
+        max-height: 5.25rem
+    }
+
+    .t-34 .blog.no-grid .wnd-private-content .item-head h2 .listing-data span:before {
+        margin-right: .875rem
+    }
+}
