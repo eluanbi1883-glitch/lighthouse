@@ -1,0 +1,243 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
+  <!--        <link rel="stylesheet" href="/lighthouse/css/pannellum.css"/>
+    <script type="text/javascript" src="/lighthouse/js/pannellum.js"></script>-->
+    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 1024px;
+        height: 512px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "circle",
+        "author": "鵝鑾鼻燈塔燈樓層介紹",
+        "sceneFadeDuration": 1000,
+            "autoLoad": false,  //自動加載 ture 是 false 否
+                "northOffset": 247.5
+    },
+//============================"鵝鑾鼻燈塔1F"
+    "scenes": {
+        "circle": {
+            "title": "鵝鑾鼻燈塔1F",  //第一張
+            "hfov": 100,
+            "pitch": 0,
+            "yaw": 330,
+            "type": "equirectangular",
+            "panorama": "/lighthouse/picture/360/燈塔1F_A.JPG",
+            "hotSpots": [
+                {
+                    "pitch": -0,
+                    "yaw": 360.9,
+                    "type": "scene",
+                    "text": "往-燈塔2樓層",
+                    "sceneId": "2F"
+                 }
+                 
+            ]
+        },
+//============================"鵝鑾鼻燈塔2F"
+        "2F": {
+            "title": "鵝鑾鼻燈塔2F",  //第二張
+            "hfov": 110,
+            "yaw": 60,					//相片畫面起點
+            "type": "equirectangular",
+            "panorama": "/lighthouse/picture/360/燈塔2F-01.JPG",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 120,
+                    "type": "scene",
+                    "text": "往-燈塔3樓",
+                    "sceneId": "3F",
+                    "targetYaw": 37.1,
+                    "targetPitch": 2
+                },
+        {
+            "pitch": -60.9,
+            "yaw": 280,
+            "type": "scene",
+            "text": "往-燈塔1樓",
+             "sceneId": "circle",
+             "targetYaw": 0,
+             "targetPitch": 2
+            
+        }
+            ]
+        },
+//============================"鵝鑾鼻燈塔3F"
+        "3F": {
+            "title": "鵝鑾鼻燈塔3F",  //第三張
+            "hfov": 110,
+            "yaw": 30,				//相片畫面起點
+			"pitch": -0.6,
+            "type": "equirectangular",
+            "panorama": "/lighthouse/picture/360/燈塔3F_01.JPG",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "往-燈塔4樓",
+                    "sceneId": "4F",
+                    "targetYaw":  37.1,  //37.1
+                    "targetPitch": 2
+                },
+        {
+            "pitch":  -50.9,
+            "yaw": 165,
+            "type": "scene",
+            "text": "往-燈塔2樓",
+            "sceneId": "2F",
+            "targetYaw": 280,
+            "targetPitch": -60.9
+        }
+            ]
+        },
+//============================"鵝鑾鼻燈塔4F"
+                "4F": {
+            "title": "鵝鑾鼻燈塔4F",  //第四張
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "/lighthouse/picture/360/燈塔4F_01.JPG",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 5,
+                    "type": "scene",
+                    "text": "往-燈塔5樓",
+                    "sceneId": "5F",
+                    "targetYaw": 350,
+                    "targetPitch": -0.9
+                },
+        {
+            "pitch": -60,
+            "yaw": 130,
+            "type": "scene",
+            "text": "往-燈塔3樓",
+             "sceneId": "3F",
+             "targetYaw": 165,
+             "targetPitch": -50.9
+        }
+            ]
+        },
+//============================"鵝鑾鼻燈塔5F"
+                 "5F": {
+            "title": "鵝鑾鼻燈塔5F",  //第五張
+            "hfov": 110,
+            "yaw": 250,
+            "type": "equirectangular",
+            "panorama": "/lighthouse/picture/360/燈塔5F.JPG",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 350.1,
+                    "type": "scene",
+                    "text": "往-燈室(施工中)",
+                    "sceneId": "6F",
+                    "targetYaw": 350,
+                    "targetPitch": -0.9
+                },
+                 {
+                    "pitch": -30.6,
+                    "yaw": 10,
+                    "type": "scene",
+                    "text": "往-燈塔4樓",
+                    "sceneId": "4F",
+                    "targetYaw": 130.4,
+                    "targetPitch": -60.9
+                },
+                
+        {
+            "pitch": -0.9,
+            "yaw": 50.4,
+            "type": "scene",
+            "text": "往-燈塔5東門",
+             "sceneId": "5F-W",
+            
+        },
+        {
+            "pitch": -0.9,
+            "yaw": 250.4,
+            "type": "scene",
+            "text": "往-燈塔5西門",
+             "sceneId": "5F-E",
+            
+        },
+            ]
+                    },
+//============================"鵝鑾鼻燈塔5東門"
+                 "5F-W": {
+            "title": "鵝鑾鼻燈塔東邊美景",  //東門
+            "hfov": 170,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "/lighthouse/picture/360/燈塔5F_02E.JPG",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 170,
+                    "type": "scene",
+                    "text": "往-燈塔5樓層",
+                    "sceneId": "5F",
+                    "targetYaw": 250.4,
+                    "targetPitch": -0.9
+                },
+            ]        },
+//============================"鵝鑾鼻燈塔5西門"
+                 "5F-E": {
+            "title": "鵝鑾鼻燈塔西邊美景",  //西門
+            "hfov": 110,
+            "yaw": 250,
+            "type": "equirectangular",
+            "panorama": "/lighthouse/picture/360/燈塔5_02W.JPG",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "往-燈塔5樓層",
+                    "sceneId": "5F",
+                    "targetYaw": 350.4,
+                    "targetPitch": -0.9
+                },
+                            ]        },
+//============================"鵝鑾鼻燈塔6F"
+        "6F": {
+            "title": "燈室",  //第六張
+            "hfov": 110,
+            "yaw": 30,				//相片畫面起點
+			"pitch": -0.6,
+            "type": "equirectangular",
+            "panorama": "/lighthouse/picture/玻璃帷幕/玻璃帷幕2.JPG",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "往-燈塔5樓",
+                    "sceneId": "5F",
+                    "targetYaw":  37.1,  //37.1
+                    "targetPitch": 2
+                  },
+            ]        }
+//============================"end"
+    }
+});
+</script>
+
+</body>
+</html>
