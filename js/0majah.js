@@ -17325,10 +17325,10 @@ function(e) {
         ,
         i.prototype.checkImages = function() {
             var t, n = this, i = this.reelElm.find("article.item").eq(0).find(".item-media").outerWidth(!0), o = "/200/", r = "";
-            i > 900 ? o = "/" : i > 700 ? o = "/" : i > 400 ? o = "/" : i > 200 && (o = "/"),
+            i > 900 ? o = "/" : i > 700 ? o = "/900/" : i > 400 ? o = "/700/" : i > 200 && (o = "/450/"),
             this.reelElm.find(".item:not(.wnd-empty-thumbnail)").each((function() {
                 if (t = e(this).find("img").attr("src"),
-                r = t.indexOf("/700/") > -1 ? "/" : t.indexOf("/") > -1 ? "/" : t.indexOf("/200/") > -1 ? "/" : "/",
+                r = t.indexOf("/700/") > -1 ? "/700/" : t.indexOf("/450/") > -1 ? "/450/" : t.indexOf("/200/") > -1 ? "/200/" : "/",
                 o !== r) {
                     var i = n.replaceImgSrc(t, r, o);
                     e(this).find("img").attr("src", i)
@@ -19292,7 +19292,7 @@ $(document).ready((function() {
                             title: r
                         },
                         phabletImg: {
-                            src: e(n, "/", "/"),
+                            src: e(n, "/", "/450/"),
                             w: 450,
                             h: 450 / i * o,
                             title: r
@@ -19376,7 +19376,7 @@ $(document).ready((function() {
                             title: r
                         },
                         phabletImg: {
-                            src: e(n, "/", "/"),
+                            src: e(n, "/", "/450/"),
                             w: 450,
                             h: 450 / i * o,
                             title: r
@@ -19448,7 +19448,7 @@ $(document).ready((function() {
                             title: r
                         },
                         phabletImg: {
-                            src: e(n, "/", "/"),
+                            src: e(n, "/", "/450/"),
                             w: 450,
                             h: 450 / i * o,
                             title: r
