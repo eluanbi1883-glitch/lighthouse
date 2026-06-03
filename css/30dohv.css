@@ -1461,15 +1461,15 @@ body.wnd-fe:not(.touched) .b-text a:hover,body.wnd-fe:not(.touched) .b-text a fo
     color: #ccc
 }
 
-/*!20260603問題
+
 .lbox-d .pswp__button,.lbox-d .pswp__button--arrow--left:before,.lbox-d .pswp__button--arrow--right:before {
-    background-image: url(../../3y/3yb/3ybh5o.png)
+    background-image: url(../files/3y/3yb/3ybh5o.png)
 }
 
 .lbox-d .pswp--svg .pswp__button,.lbox-d .pswp--svg .pswp__button--arrow--left:before,.lbox-d .pswp--svg .pswp__button--arrow--right:before {
-    background-image: url(../../33/33c/33c7ft.svg)
+    background-image: url(../files/33/33c/33c7ft.svg)
 }
-*/
+
 .lbox-l .pswp__bg {
     background: #fff
 }
@@ -1481,15 +1481,15 @@ body.wnd-fe:not(.touched) .b-text a:hover,body.wnd-fe:not(.touched) .b-text a fo
 .lbox-l .pswp__error-msg,.lbox-l .pswp__error-msg a {
     color: #222
 }
-/*!   20260603問題
+ 
 .lbox-l .pswp__button,.lbox-l .pswp__button--arrow--left:before,.lbox-l .pswp__button--arrow--right:before {
-    background-image: url(../../1a/1a7/1a728k.png)
+    background-image: url(../files/1a/1a7/1a728k.png)
 }
 
 .lbox-l .pswp--svg .pswp__button,.lbox-l .pswp--svg .pswp__button--arrow--left:before,.lbox-l .pswp--svg .pswp__button--arrow--right:before {
-    background-image: url(../../1o/1od/1odgbr.svg)
+    background-image: url(../files/1o/1od/1odgbr.svg)
 }
-*/
+
 .pswp {
     display: none;
     position: absolute;
