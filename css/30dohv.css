@@ -15717,8 +15717,12 @@ body.wnd-fe:not(.touched) .hbc-i-l li>span:hover,body.wnd-fe:not(.touched) .hbc-
     margin: 0
 }
 
+.overlay-black-01 {
+	background-color: rgba(114,105,105,0.60)
+}
+
 .overlay-black {
-    background-color: rgba(0,0,0,.6)
+	background-color: rgba(0,0,0,0.60)
 }
 
 .overlay-black-light {
