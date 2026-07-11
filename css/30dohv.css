@@ -17219,3 +17219,88 @@ body.wnd-fe:not(.touched) .hbc-i-l li>span:hover,body.wnd-fe:not(.touched) .hbc-
         display:block!important
     }
 }
+
+
+/*! 測試階段20260615 */
+
+.wnd-free-stripe-button {
+    display: flex;
+    padding: .375rem .75rem;
+    border-radius: 5px;
+    background: #fff;
+    margin: 0 0 0 .625rem;
+    min-height: 1.875rem;
+    word-break: keep-all;
+    white-space: break-spaces;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.1
+    
+    
+    .wnd-free-stripe-button {
+        padding: .5rem 1rem;
+        margin: 0 0 0 1.25rem
+    }
+    
+    
+.wnd-free-stripe-text,.wnd-free-stripe-text-mobile {
+    text-align: left;
+    padding-top: .0625rem;
+    color: #fff;
+    text-decoration: none
+}
+
+.wnd-free-stripe-text {
+    display: none
+}
+
+.wnd-free-bar-limited .wnd-free-stripe-text {
+    padding-right: .9375rem;
+    display: block
+}
+
+.wnd-free-stripe-text-mobile {
+    display: block
+}
+
+
+
+/*! 測試階段20260615 */
+/*! 測試階段20260626輪播相片CSS */
+#changeimg{
+ width: 1920px;
+  height: 1000px;
+  margin: 0;
+  overflow: visible;
+  position: relative;
+  border: solid 5px #ccc;
+}
+#changeimg img{   /*! 圖片固定畫質大小調整 */
+  width: 1920px;
+  height: 1080px;
+}
+ 
+}
+#changeimg a{
+  color: #6A6AFF;
+  padding: 3px;
+  bottom: 7px;
+  display: block;
+  font-weight: bold;
+  position: absolute;
+  text-decoration: none;
+  border: solid 1px #ccc;
+  background-color: #ECECFF;
+}
+.c1{
+  right: 58px;
+}
+.c2{
+  right: 32px;
+}
+.c3{
+  right: 7px;
+}
+/*! 測試階段20260626輪播相片CSS */
+

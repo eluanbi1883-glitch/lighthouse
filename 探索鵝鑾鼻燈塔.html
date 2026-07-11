@@ -18,6 +18,8 @@
 	<meta name="msapplication-tap-highlight" content="no">
 <!--OK==============================================================================================================================-->
 <!--================================================================================================================================-->	
+
+	<link href="/lighthouse/css/weather.css" rel="stylesheet">
 	<link href="/lighthouse/css/30dohv.css" rel="stylesheet">
     <link href="/lighthouse/css/28qgt2.css" media="screen and (min-width:37.5em)" rel="stylesheet" disabled>
     <link href="/lighthouse/css/0oq7ka.css" media="print" rel="stylesheet">
@@ -38,8 +40,7 @@
 	window.addEventListener("resize",loadDesktopCSS)
 	</script>
 <!--==============================================================================================================================-->		
-
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!--呼叫天氣符號-->
 <link rel="stylesheet" href="/lighthouse/css/02-3ggjzy.css" data-wnd_color_scheme_file=""><!-- sit 相關字型變化-->
 <link rel="stylesheet" href="/lighthouse/css/02-48bplw.css" data-wnd_color_scheme_desktop_file="" media="screen and (min-width:37.5em)"><!--  .menu 符號圖示呼叫相關字型變化-->
 <link rel="stylesheet" href="/lighthouse/css/40ocdy.css" data-wnd_color_scheme_desktop_file="" media="screen and (min-width:37.5em)">
@@ -365,6 +366,53 @@
 </div></div>
 </div></div>
 </div>
+<!--============================================================================================-->
+<div class="weather-card">
+
+    <div class="item">
+        <i class="fa-solid fa-cloud-sun"></i>
+        <div>
+            <h3>溫度</h3>
+            <span id="temp">18°C~22°C</span>
+        </div>
+    </div>
+
+    <div class="item">
+        <i class="fa-solid fa-umbrella"></i>
+        <div>
+            <h3>降雨機率</h3>
+            <span id="rain">10%</span>
+        </div>
+    </div>
+<!--
+    <div class="item">
+        <i class="fa-solid fa-sun"></i>
+        <div>
+            <h3>日出</h3>
+            <span id="sunrise">--:--</span>
+        </div>
+    </div>
+
+    <div class="item">
+        <i class="fa-solid fa-moon"></i>
+        <div>
+            <h3>日落</h3>
+            <span id="sunset">--:--</span>
+        </div>
+    </div>
+    <div class="item">
+        📅 日期：<span id="today">----</span>
+    </div>
+  
+  -->
+</div>
+<!--============================================================================================-->
+
+
+
+
+
+
 					</div>
 				</div>
 			</div>
@@ -452,6 +500,7 @@
 	}()
 </script>
 <!--=================================================================================================================================================================================================-->
+	<script type="text/javascript" src="/lighthouse/js/weather.js"></script>				<!--顯示氣象	-->
 	<script type="text/javascript" src="/lighthouse/js/0majah.js"></script>				<!--選單排版顯示	-->
 <!--	<script src="../js/lang.zh-tw.547.js" crossorigin="anonymous"></script>	-->			<!--版面排版下段分頁展開-->
 
