@@ -448,23 +448,43 @@
 	<div class="ez-c"><div class="b b-text cf">
 	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><h1 class="wnd-align-center"><strong style="font-size: 3.4375rem;">迴轉機的成就</strong></h1> <h3 class="wnd-align-justify"><strong>燈塔於1962年由政府整修後，塔高21.4公尺，塔頂換裝新式大型四等旋轉透鏡電燈，經過大型旋轉透鏡後，光力為180萬燭光，每十秒一閃，照射距離達27.2海浬&nbsp;</strong></h3> </div>
 </div>
-<div class="cw cf">
-	<div class="cw-c cf"><div class="c cf" style="width:50%;">
+<!--OK==============================================================================================================================-->
+		<div class="cw cf">
+		<div class="cw-c cf">
+<!--==============================================================================================================================-->
+<div class="c cf" style="width:33%;">
 	<div class="c-c cf"><div class="b b-text cf">
-	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><h2 class="wnd-align-center"><strong><font class="wsw-41 wnd-font-size-140">24小時</font></strong></h2></div>
+	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><h2 class="wnd-align-center"><font class="wsw-41 wnd-font-size-180">24小時</font></h2></div>
 </div><div class="b b-text cf">
-	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><p class="wnd-align-center"><strong><font class="wnd-font-size-130">全年無休運轉，保護航道安全</font></strong></p></div>
+	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><p class="wnd-align-center"><strong><font class="wnd-font-size-120">全年無休運轉，保護航道安全</font></strong></p></div>
 </div></div>
-</div><div class="c cf" style="width:50%;">
+</div>
+<!--==============================================================================================================================-->
+
+<div class="c cf" style="width:33%;">
 	<div class="c-c cf"><div class="b b-text cf">
-	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><h2 class="wnd-align-center"><strong><font class="wsw-41 wnd-font-size-140">100%</font></strong></h2></div>
+	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><h2 class="wnd-align-center"><font class="wsw-41 wnd-font-size-180" id = "years"></font><font class="wsw-41 wnd-font-size-180">年</font></h2></div>
 </div><div class="b b-text cf">
-	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><p class="wnd-align-center"><strong><font class="wnd-font-size-130">夜間照明</font></strong></p></div>
+	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><p class="wnd-align-center"><font class="wnd-font-size-120"><strong>正常運轉</strong></font></p></div>
 </div></div>
+</div>
 
 
+
+<!--==============================================================================================================================-->
+
+<div class="c cf" style="width:33%;">
+	<div class="c-c cf"><div class="b b-text cf">
+	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><h2 class="wnd-align-center"><font class="wsw-41 wnd-font-size-180">100%</font></h2></div>
+</div><div class="b b-text cf">
+	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><p class="wnd-align-center"><font class="wnd-font-size-120"><strong>夜間照明</strong></font></p></div>
 </div></div>
-</div></div>
+</div>
+<!--==============================================================================================================================-->
+		</div>
+		</div>
+		</div>
+
 </div>
 			</div>
 		</div>
@@ -570,7 +590,13 @@
 </div>-->
 	</div>
 
-	
+<!--=================================================================================================================================================================================================-->	
+<script type="application/javascript">
+
+
+</script>
+<!--=================================================================================================================================================================================================-->
+
 
 <!--=================================================================================================================================================================================================-->	
 <script>
@@ -578,6 +604,11 @@
 const API_KEY = "CWA-36BA3E97-0770-40C9-B7F8-AA934780E062";
 
 const today = new Date();
+const years = today.getFullYear() - 1883;  
+document.getElementById("years").innerHTML=years;
+
+
+
 const date =
 `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,"0")}-${String(today.getDate()).padStart(2,"0")}`;
 async function loadSunData(){
