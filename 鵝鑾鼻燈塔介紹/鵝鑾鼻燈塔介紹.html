@@ -39,7 +39,8 @@
 	</script>
 <!--==============================================================================================================================-->		
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" data-wnd_color_scheme_file="">
+<!--  氣象 符號圖示呼叫相關字型變化-->
 <link rel="stylesheet" href="../css/02-3ggjzy.css" data-wnd_color_scheme_file=""><!-- sit 相關字型變化-->
 <!--<link rel="stylesheet" href="../css/02-48bplw.css" data-wnd_color_scheme_desktop_file="" media="screen and (min-width:37.5em)">--> <!--  .menu 符號圖示呼叫相關字型變化-->
 <link rel="stylesheet" href="../css/40ocdy.css" data-wnd_color_scheme_desktop_file="" media="screen and (min-width:37.5em)">
@@ -739,13 +740,95 @@
 	<br><p><strong>上午九時至下午五時（冬令時間11月1日至3月31日）</strong></p>
 	<br><strong>每逢星期一內部整理不開放</strong>
 	<br><strong>*鵝鑾鼻燈塔目前無開放上塔頂與燈室內部&nbsp;</strong></div>
-</div><div class="b b-s b-s-t150 b-s-b150 b-btn b-btn-2 wnd-align-center">
+</div>
+<div class="b b-s b-s-t150 b-s-b150 b-btn b-btn-2 wnd-align-center">
 	<div class="b-btn-c i-a">
-		<a class="b-btn-l" href="https://www.cwa.gov.tw/V8/C/W/OBS_Station.html?ID=C0R62" rel="nofollow" title="目前燈塔天氣">
-		<strong>	<span class="b-btn-t">目前燈塔天氣</span></strong>
+		<a class="b-btn-l" href="https://www.cwa.gov.tw/V8/C/W/OBS_Station.html?ID=C0R71" rel="nofollow" title="目前燈塔天氣">
+		<strong>	<span class="b-btn-t">目前燈塔附近天氣-龍磐測站觀測資料</span></strong>
 		</a>
 	</div>
-</div></div>
+</div>
+<!--==================================-->
+<div class="c cf" style="width:20%;">
+                                                                                        <div class="c-c cf">
+                                                                                            <div class="b b-text cf">
+                                                                                                <div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf wnd-align-center">
+                                                                                                         <i id="icon" ></i>
+                                                                                                    <h2 class="wnd-align-center"><strong>今天天氣</strong></h2>
+                                                                                                    <p class="wnd-align-center">
+                                                                                                        <strong id="temperature">--°C</strong>
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="c cf" style="width:17.5%;">
+                                                                                        <div class="c-c cf">
+                                                                                            <div class="b b-text cf">
+                                                                                                <div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf wnd-align-center">
+                                                                                                        <i class="fa-solid fa-wind"></i>
+                                                                                                    <h2 class="wnd-align-center"><strong>風級</strong></h2>
+                                                                                                    <p class="wnd-align-center">
+                                                                                                        <strong id="windDir">- km/h　-級 &nbsp;</strong>
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="c cf" style="width:18%;">
+                                                                                        <div class="c-c cf">
+                                                                                            <div class="b b-text cf">
+                                                                                                <div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf wnd-align-center">
+                                                                                                     <i class="fa-solid fa-wind"></i>
+                                                                                                    <h2 class="wnd-align-center">風向</h2>
+                                                                                                    <p class="wnd-align-center">
+                                                                                                        <strong  id="windSpeed">--&nbsp;</strong>
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="c cf" style="width:20%;">
+                                                                                        <div class="c-c cf">
+                                                                                            <div class="b b-text cf">
+                                                                                                <div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf  wnd-align-center">
+                                                                                                        <i class="fa-solid fa-eye"></i>
+                                                                                                    <h2 class="wnd-align-center">能見度</h2>
+                                                                                                    <p class="wnd-align-center">
+                                                                                                        <strong id="visibility">0級</strong>
+                                                                                                    </p>
+                                                                                                    
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="c cf" style="width:20%;">
+                                                                                        <div class="c-c cf">
+                                                                                            <div class="b b-text cf">
+                                                                                                <div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf wnd-align-center">
+                                                                                                    <i class="fa-solid fa-umbrella"></i>
+                                                                                                    <h2 class="wnd-align-center">降雨機率</h2>
+                                                                                                    <p class="wnd-align-center">
+                                                                                                        <strong id = "rain">--%</strong>
+                                                                                                    </p>
+                                                                                                    <p class="wnd-align-center"><strong id = "weatherText" class="desc">-- &nbsp;</strong>
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+
+
+
+
+
+
+
+
+
+<!--====================================-->
+</div>
 </div>
 			</div>
 		</div>
@@ -813,12 +896,7 @@
 	
 
 <!--=================================================================================================================================================================================================-->	
-<script type="application/javascript">
-const today=new Date();
-const years = today.getFullYear() - 1883;  
-document.getElementById("years").innerHTML=years;
 
-</script>
 
 <!--=================================================================================================================================================================================================-->
 <script type="application/javascript">
@@ -836,6 +914,7 @@ document.getElementById("years").innerHTML=years;
 	}()
 </script>
 <!--=================================================================================================================================================================================================-->
+    <script src="/lighthouse/js/weather.js"></script>
 	<script type="text/javascript" src="../js/0majah.js"></script>				<!--選單排版顯示	-->
 <!--	<script src="../js/lang.zh-tw.547.js" crossorigin="anonymous"></script>	-->			<!--版面排版下段分頁展開-->
 
