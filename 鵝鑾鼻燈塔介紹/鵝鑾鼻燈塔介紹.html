@@ -682,7 +682,7 @@
 		<div class="cw cf">
 		<div class="cw-c cf">
 <!--==============================================================================================================================-->
-<div class="c cf" style="width:50%;">
+<div class="c cf" style="width:33%;">
 	<div class="c-c cf"><div class="b b-text cf">
 	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><h2 class="wnd-align-center"><font class="wsw-41 wnd-font-size-180">24小時</font></h2></div>
 </div><div class="b b-text cf">
@@ -690,7 +690,20 @@
 </div></div>
 </div>
 <!--==============================================================================================================================-->
-<div class="c cf" style="width:50%;">
+
+<div class="c cf" style="width:33%;">
+	<div class="c-c cf"><div class="b b-text cf">
+	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><h2 class="wnd-align-center"><font class="wsw-41 wnd-font-size-180" id = "years"></font><font class="wsw-41 wnd-font-size-180">年</font></h2></div>
+</div><div class="b b-text cf">
+	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><p class="wnd-align-center"><font class="wnd-font-size-120"><strong>歷史</strong></font></p></div>
+</div></div>
+</div>
+
+
+
+<!--==============================================================================================================================-->
+
+<div class="c cf" style="width:33%;">
 	<div class="c-c cf"><div class="b b-text cf">
 	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf"><h2 class="wnd-align-center"><font class="wsw-41 wnd-font-size-180">100%</font></h2></div>
 </div><div class="b b-text cf">
@@ -800,7 +813,12 @@
 	
 
 <!--=================================================================================================================================================================================================-->	
+<script type="application/javascript">
+const today=new Date();
+const years = today.getFullYear() - 1883;  
+document.getElementById("years").innerHTML=years;
 
+</script>
 
 <!--=================================================================================================================================================================================================-->
 <script type="application/javascript">
