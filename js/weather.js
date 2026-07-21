@@ -349,6 +349,9 @@ function showWeather(code, sunrise, sunset) {
 
 // 日期
 const today=new Date();
+const years = today.getFullYear() - 1883;  
+document.getElementById("years").innerHTML=years;
+
 
 //document.getElementById("date").innerHTML=`${today.getMonth()+1}/${today.getDate()}`;
 document.getElementById("date").innerHTML=`${today.getMonth()+1}/${today.getDate()} ${today.getHours()}:${today.getMinutes()}`;
