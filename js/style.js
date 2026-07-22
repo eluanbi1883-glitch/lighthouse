@@ -1,8 +1,8 @@
-﻿
-//const temp=document.getElementById("temp");  
+﻿//const temp=document.getElementById("temp");  
 //temp.innerHTML = 32+"°C";   
-const temperature=document.getElementById("temperature");    //最低溫度~最高溫度
-const temperatureMaxMin=document.getElementById("temperatureMaxMin"); 
+//const temperature=document.getElementById("temperature");    //最低溫度~最高溫度
+const temperatureMin=document.getElementById("temperatureMin");  //最低溫度
+const temperatureMax=document.getElementById("temperatureMax");  //最高溫度
 const rain=document.getElementById("rain");      
 //rain.innerHTML = 100+"%";   
               const sunrise=document.getElementById("sunrise");		    		//日出
@@ -48,7 +48,8 @@ loadWeather(lat,lon);
 loadMarine();                             //刷新海浪
 },6000000);                               //
 }
-
+*/
+/*
 async function loadCity(lat,lon){
    
 const res=await fetch(
@@ -64,7 +65,6 @@ data3.address.county||
 data3.address.state||
 "未知位置";
 }
-
 loadCity(21.90, 120.85);
 */
 //呼叫氣象資料
@@ -72,12 +72,37 @@ async function loadWeather(lat,lon){
          
 const url=`https://api.open-meteo.com/v1/forecast?latitude=21.90&longitude=120.85&current=temperature_2m,weather_code,wind_speed_10m,wind_direction_10m,visibility,relative_humidity_2m&hourly=precipitation_probability&daily=sunrise,sunset,temperature_2m_min,temperature_2m_max,uv_index_max&timezone=Asia/Taipei`;
 
+
 const res=await fetch(url);
 const data=await res.json();
 
 
 
 //console.log(data);
+//  console.log(data);
+
+async function getWeather(){
+
+    let res = await fetch(url);
+
+    let data = await res.json();
+
+
+    console.log(data);   // ← 這裡查看 API 回傳
+
+
+    let c = data.current;
+    let d = data.daily;
+
+}
+
+
+
+
+
+
+
+
   
 //溫度
 //temp.innerHTML=data.current.temperature_2m+"°C";
@@ -101,6 +126,8 @@ const degree = data.current.wind_direction_10m;
 windSpeed.innerHTML = speed + " km/h　" + windLevel(speed);
 windDir.innerHTML = degreeToText(degree);
 
+//const windSpeed = document.getElementById("windSpeed");
+  
 //能見度
 let vis = data.current.visibility;//單位距離公尺
 //let vis = 3000;                 //模擬 
@@ -109,8 +136,10 @@ visibility.innerHTML = formatVisibility(vis);
     // 目前溫度
 const temp = data.current.temperature_2m;
 //let temp = 28.6;
+   document.getElementById("temp").innerHTML = `${temp}°C`;
     // 相對溼度 %
 const humidity = data.current.relative_humidity_2m;
+  document.getElementById("humidity").innerHTML = `${humidity}%`;
 //let humidity = 80;
     // 今日最低 / 最高溫
    const minTemp = data.daily.temperature_2m_min[0];
@@ -118,25 +147,26 @@ const humidity = data.current.relative_humidity_2m;
    const maxTemp = data.daily.temperature_2m_max[0];
 //let maxTemp = 29;
     // 🌡低${minTemp}°C~高${maxTemp}°C<br>
-document.getElementById("temperature").innerHTML = `💧溼度 ${humidity}%<br>🌡目前 ${temp}°C`;
+//document.getElementById("temperature").innerHTML = `💧溼度 ${humidity}%<br>🌡目前 ${temp}°C`;
 
 //document.getElementById("temperature").innerHTML = `💧溼度 80%<br>🌡目前 $28.6°C`;   
-//document.getElementById("temperatureMaxMin").innerHTML = `🌡低${minTemp}°C~高${maxTemp}°C`;
+document.getElementById("temperatureMin").innerHTML = `🌡最低${minTemp}°C`;
+document.getElementById("temperatureMax").innerHTML = `🌡最高${maxTemp}°C`;
 
   
 
 //天氣現象
 showWeather(data.current.weather_code);
 //模擬天氣現象
-//showWeather(1);
+//showWeather(0);
 
 
 //UV 指數
   const uv = data.daily.uv_index_max[0];
 
 //  const uv = 3;                 //模擬UV
-//document.getElementById("uv").innerHTML = uv;
-//document.getElementById("uvText").innerHTML = uvLevel(uv);
+document.getElementById("uv").innerHTML = uv;
+document.getElementById("uvText").innerHTML = uvLevel(uv);
 
 //UV 指數判等級
   function uvLevel(uv){
@@ -159,18 +189,21 @@ return "極高";
 
 if(data.daily.uv_index_max){
 
-//    document.getElementById("uv").innerHTML = data.daily.uv_index_max[0];
+    document.getElementById("uv").innerHTML =data.daily.uv_index_max[0];
 
 }
 else{
 
-    document.getElementById("uv").innerHTML =
-    "無資料";
+    document.getElementById("uv").innerHTML ="無資料";
 
 }
+
+
+
+
+
+
   
-
-
 //風向(角度轉文字
 function degreeToText(deg){
 
@@ -289,8 +322,8 @@ function formatVisibility(meter){
 // 判斷是否為白天
 function isDay(sunrise, sunset) {
     const now = new Date();
-    const sunriseTime = data.daily.sunrise[0].substring(11,16);
-    const sunsetTime = data.daily.sunset[0].substring(11,16);
+    const sunriseTime = new Date(sunrise).getTime();
+    const sunsetTime = new Date(sunset).getTime();
 
     return now >= sunsetTime && now < sunriseTime;
 }
@@ -300,8 +333,8 @@ function isDay(sunrise, sunset) {
 //完整 Weather Code 對照
 function showWeather(code, sunrise, sunset) {
 
-    const day = isDay(sunrise, sunset);
-//    const day = isDay(sunset, sunrise);
+//    const day = isDay(sunrise, sunset);
+    const day = isDay(sunset, sunrise);
     const weatherMap = {
         0:  { icon: day ? "☀️" : "🌙☀️",   text: "晴天" },
         1:  { icon: day ? "🌤️" : "🌙☁️", text: "大致晴朗" },
@@ -341,24 +374,22 @@ function showWeather(code, sunrise, sunset) {
         text: "未知"
     };
 
-    document.getElementById("icon").textContent = weather.icon;
+ //   document.getElementById("icon").textContent = weather.icon;
+  
     document.getElementById("weatherText").textContent = weather.text;
 }
 
 
 // 日期
 const today=new Date();
-//const years = today.getFullYear() - 1883;  
-//document.getElementById("years").innerHTML=years;
-
 
 //document.getElementById("date").innerHTML=`${today.getMonth()+1}/${today.getDate()}`;
-//document.getElementById("date").innerHTML=`${today.getMonth()+1}/${today.getDate()} ${today.getHours()}:${today.getMinutes()}`;
-//let time = `${today.getHours()}:${today.getMinutes()}`;
-//document.getElementById("time").innerHTML=time;
+document.getElementById("date").innerHTML=`${today.getMonth()+1}/${today.getDate()} ${today.getHours()}:${today.getMinutes()}`;
+let time = `${today.getHours()}:${today.getMinutes()}`;
+document.getElementById("time").innerHTML=time;
 }
 
-loadWeather(21.90, 120.85);
+loadWeather(21.99, 120.74);
 
 
 //=========================================================================
@@ -380,19 +411,21 @@ fetch(marineUrl)
 //const h=0;
 const h=new Date().getHours();
 
-  
-//document.getElementById("waveHeight").innerHTML=data1.hourly.wave_height[h]+" m";
+//浪高  
+document.getElementById("waveHeight").innerHTML=data1.hourly.wave_height[h]+" m";
+//波形
+document.getElementById("wavePeriod").innerHTML=data1.hourly.wave_period[h]+" 秒";
 
-//document.getElementById("wavePeriod").innerHTML=data1.hourly.wave_period[h]+" 秒";
-
-//document.getElementById("waveDir").innerHTML=
-//data.hourly.wave_direction[i]+"°";
+//document.getElementById("waveDir").innerHTML=data.hourly.wave_direction[i]+"°";
 
 const dir = data1.hourly.wave_direction[h];
 
+document.getElementById("waveDir").innerHTML =  degreeToDirection(dir) + ` (${dir}°)`;
+
+  
 //document.getElementById("waveDir").innerHTML = degreeToDirection(dir) + ` (${dir}°)`;
-//document.getElementById("waveDir").innerHTML = degreeToDirection(dir) + ` (${dir}°)`;
-// waveDir1.innerHTML = `${data1.hourly.wave_direction[h]}`;
+        
+        // waveDir1.innerHTML = `${data1.hourly.wave_direction[h]}`;
 
 });
 
@@ -412,3 +445,4 @@ function degreeToDirection(deg) {
     ];
     return dirs[Math.round(deg / 45)];
 }
+

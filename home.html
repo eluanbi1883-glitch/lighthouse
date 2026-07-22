@@ -18,6 +18,7 @@
 	<meta name="msapplication-tap-highlight" content="no">
 <!--OK==============================================================================================================================-->
 <!--================================================================================================================================-->	
+	<link href="/lighthouse/css/style.css" rel="stylesheet">
 	<link href="/lighthouse/css/30dohv.css" rel="stylesheet">
     <link href="/lighthouse/css/28qgt2.css" media="screen and (min-width:37.5em)" rel="stylesheet" disabled>
     <link href="/lighthouse/css/0oq7ka.css" media="print" rel="stylesheet">
@@ -48,7 +49,7 @@
 <link rel="stylesheet" href="/lighthouse/css/02-2bz3ny.css" data-wnd_typography_file="">
 <link rel="stylesheet" href="/lighthouse/css/02-2y9p0e.css" data-wnd_typography_desktop_file="" media="screen and (min-width:37.5em)">
 <link rel="stylesheet" href="/lighthouse/css/njp4uhl.css">
-	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  	<!-- 氣象小圖示變化-->
 	
 <!--==============================================================================================================================-->	
 	
@@ -326,7 +327,7 @@
 	<div class="b b-s b-s-t150 b-s-b150 b-btn b-btn-1 wnd-align-center" id="wnd_ButtonBlock_76768" data-wnd_mvc_type="wnd.pc.ButtonBlock">
 	<div class="b-btn-c i-a">
 		<a class="b-btn-l" href="#wnd_PhotoGalleryBlock_201" target="_blank">
-			<span class="b-btn-t wnd-touchwysiwyg">關於鵝鑾鼻公園</span>
+			<h2><span class="b-btn-t wnd-touchwysiwyg">關於鵝鑾鼻公園</span></h2>
 		</a>
 	</div>
 </div>
@@ -334,7 +335,7 @@
     <div class="b b-s b-s-t150 b-s-b150 b-btn b-btn-3 wnd-align-center" id="wnd_ButtonBlock_420" data-wnd_mvc_type="wnd.pc.ButtonBlock">
 	<div class="b-btn-c i-a">
 		<a class="b-btn-l" href="/lighthouse/鵝鑾鼻燈塔介紹/鵝鑾鼻燈塔介紹.html">
-			<span class="b-btn-t wnd-touchwysiwyg">探索鵝鑾鼻燈塔</span>
+			<h2><span class="b-btn-t wnd-touchwysiwyg">探索鵝鑾鼻燈塔</span></h2>
 		</a>
 	</div>
 </div>
@@ -343,25 +344,130 @@
 <div class="b b-text cf" id="wnd_TextBlock_290476946" data-wnd_mvc_type="wnd.pc.TextBlock">
 	<br>
 		<br>
-			<br>	<h3><strong style="color: rgb(255, 255, 255);">在1982年成立鵝鑾鼻公園，以<font class="wsw-13"><a href="/lighthouse/鵝鑾鼻公園步道/鵝鑾鼻燈塔/鵝鑾鼻燈塔.html" rel="nofollow" title="鵝鑾鼻燈塔">鵝鑾鼻燈塔</a></font>為主體，規劃出鄰近五十公頃的風景區，後又劃為國家公園管理</strong></h3>
-				<br>
+			<br>	<h2><strong style="color: rgb(255, 255, 255);">在1982年成立鵝鑾鼻公園，以<font class="wsw-13"><a href="/lighthouse/鵝鑾鼻公園步道/鵝鑾鼻燈塔/鵝鑾鼻燈塔.html" rel="nofollow" title="鵝鑾鼻燈塔">鵝鑾鼻燈塔</a></font>為主體，規劃出鄰近五十公頃的風景區，後又劃為國家公園管理</strong></h2>
 				
-								<br>
-									<br>
-										<br>
-</div><div class="b b-text cf" id="wnd_TextBlock_4604" data-wnd_mvc_type="wnd.pc.TextBlock">
+				
+		
+</div>
+</div>
+</div>
+<!--============-->
+<!--============================================================================================-->	
+
+<h1>鵝鑾鼻 今日天氣</h1>
+
+<div class="grid overlay-black-01">
+
+<div class="card">
+<i class="fa-solid fa-cloud"></i>
+<h3>天氣</h3>
+<p id="temp">--</p>
+<p id="weatherText">讀取中...</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-temperature-half"></i>
+<h3>氣溫</h3>
+<p id="temperatureMin">--</p>
+<p id="temperatureMax">--</p>  
+</div>
+
+<div class="card">
+<i class="fa-solid fa-droplet"></i>
+<h3>濕度</h3>
+<p id="humidity">--</p>
+</div>
+  
+<div class="card">
+<i class="fa-solid fa-compass"></i>
+<h3>風向</h3>
+<p id="windDir">--</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-wind"></i>
+<h3>風速</h3>
+<p id="windSpeed">--</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-eye"></i>
+<h3>能見度</h3>
+<p id="visibility">--</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-cloud-rain"></i>
+<h3>降雨量</h3>
+<p id="rain">--</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-sun"></i>
+<h3>紫外線</h3>
+
+<p id="uv">--</p><br>
+<p id="uvText"></p>
+  
+</div>
+<!--
+<div class="card">
+        <i class="fa-solid fa-sun"></i>
+<h3>日出</h3>
+<p id="sunrise">--</p>
+</div>
+<div class="card">
+        <i class="fa-solid fa-moon"></i>
+<h3>日落</h3>
+<p id="sunset">--</p>
+</div>
+<div class="card">
+<i class="fa-solid fa-clock"></i>
+<h3>更新時間</h3>
+        <div id = "date"></div>
+        <div id = "time"></div>
+ </div>-->
+<div class="card">
+    <i class="fa-solid fa-water"></i>
+    <h3>海浪</h3>
+
+    <p id="waveHeight">-- m</p>
+
+    <p id="waveDir">--</p>
+
+    <p id="wavePeriod">-- 秒</p>
+</div>
 
 </div>
-<div class="b b-text cf" id="wnd_TextBlock_83311" data-wnd_mvc_type="wnd.pc.TextBlock">
-	<div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf wnd-touchwysiwyg"></div>
-</div></div>
-</div><div class="c cf" id="wnd_ContentZoneCol_233283901" data-wnd_mvc_type="wnd.pc.ContentZoneCol" style="width:58.262%;">
-	
-</div></div>
+<!--============================================================================================-->	
+                                                                               
+                                                                    
+<!--============-->
+</div>
 </div></div>
 </div>
+<!--                                                                           
+                                                                    <div class="c cf" style="width:50%;">
+                                                                        <div class="c-c cf">
+                                                                            <div class="b b-text cf">
+                                                                                <div class="b-c b-text-c b-s b-s-t60 b-s-b60 b-cs cf">
+                                                                                    <p class="wnd-align-right"> <strong style="font-size: 1.025rem; letter-spacing: -0.02rem; color: rgba(255, 255, 255, 0.8);">日出：</strong>
+                                                                                        <strong id="sunrise" style="font-size: 1.025rem; color: rgba(255, 255, 255, 0.8); letter-spacing: -0.02rem;">00:00</strong>
+                                                                                    </p>
+                                                                                    <p class="wnd-align-right"><strong style="font-size: 1.025rem; letter-spacing: -0.02rem; color: rgba(255, 255, 255, 0.8);">日落：</strong>
+                                                                                        <strong id="sunset" style="font-size: 1.025rem; color: rgba(255, 255, 255, 0.8); letter-spacing: -0.02rem;">00:00</strong>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>-->
+                                                                    
+                                                                </div>
+                                              
+                                       
+<!--==============================================================================================================================-->
+
 					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -1088,6 +1194,7 @@
 	}()
 </script>
 <!--=================================================================================================================================================================================================-->
+<script src="/lighthouse/js/style.js"></script>	<!--顯示氣象	-->
 	<script type="text/javascript" src="/lighthouse/js/0majah.js"></script>				<!--選單排版顯示	-->
 <!--	<script src="../js/lang.zh-tw.547.js" crossorigin="anonymous"></script>	-->			<!--版面排版下段分頁展開-->
 

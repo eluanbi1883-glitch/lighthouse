@@ -40,7 +40,7 @@ body.wnd-fe:not(.touched) .ac-brick .s:not([class*=sc-ac]) .ci a:hover {
 }
 
 .ac-h .ac-brick .s:not([class*=sc-ac]) .b-text h1,.ac-h .ac-brick .s:not([class*=sc-ac]) .b-text h2,.ac-h .ac-brick .s:not([class*=sc-ac]) .blog h2,.ac-h .ac-brick .s:not([class*=sc-ac]) .eshop-detail .product-title,.ac-h .ac-brick .s:not([class*=sc-ac]) .eshop-slider .product-title,.ac-h .ac-brick .s:not([class*=sc-ac]) .s-bdh-t {
-    color: #9e3b3c
+	color: #FFFFFF
 }
 
 .ac-brick .s:not([class*=sc-ac]) .b-text h1:after,.ac-brick .s:not([class*=sc-ac]) .eshop-detail-title:after,.ac-brick .s:not([class*=sc-ac]) .eshop-detail .product-title:after,.ac-brick .s:not([class*=sc-ac]) .s-bdh-t:after {
