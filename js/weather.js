@@ -311,8 +311,8 @@ function showWeather(code, sunrise, sunset) {
         45: { icon: "🌫️", text: "霧" },
         48: { icon: "🌫️", text: "濃霧" },
 
-        51: { icon: day ? "🌦️" : "🌧️", text: "毛毛雨" },
-        53: { icon: day ? "🌦️" : "🌧️", text: "毛毛雨" },
+        51: { icon: day ? "🌦️" : "⛅🌧️", text: "短暫雨" },
+        53: { icon: day ? "🌦️" : "☁🌧️", text: "多雲短暫雨" },
         55: { icon: day ? "🌧️" : "🌧️", text: "強毛毛雨" },
 
         61: { icon: "🌦️", text: "小雨" },
