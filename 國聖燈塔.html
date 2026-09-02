@@ -1,42 +1,42 @@
 ﻿
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>白色燈塔閃光模擬器</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>燈塔白色閃光</title>
+
 
 <style>
 
 /* =========================
-   基本設定
+   基本
 ========================= */
 
 * {
     box-sizing: border-box;
 }
 
-html,
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100%;
-}
 
-body {
+    margin: 0;
+
     min-height: 100vh;
 
     background:
         radial-gradient(
             circle at center,
-            #172235 0%,
-            #09111f 45%,
-            #02060c 100%
+            #1b2738 0%,
+            #080f1a 45%,
+            #02050a 100%
         );
 
-    color: #ffffff;
+    color: white;
 
     font-family:
         Arial,
@@ -44,23 +44,26 @@ body {
         sans-serif;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
-    overflow-x: hidden;
 }
 
 
 /* =========================
-   主容器
+   主畫面
 ========================= */
 
 .container {
+
     width: min(900px, 94%);
 
-    padding: 30px 20px 40px;
-
     text-align: center;
+
+    padding: 30px 15px;
+
 }
 
 
@@ -69,27 +72,28 @@ body {
 ========================= */
 
 h1 {
+
     margin: 0;
 
-    font-size: clamp(26px, 5vw, 42px);
+    font-size: clamp(28px, 5vw, 44px);
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 
-    text-shadow:
-        0 0 10px rgba(255,255,255,0.2);
 }
 
 .subtitle {
+
     margin-top: 10px;
 
-    color: #9eacbd;
+    color: #9ba9bb;
 
-    font-size: 30px;
+    font-size: 16px;
+
 }
 
 
 /* =========================
-   燈塔光源區
+   燈光區
 ========================= */
 
 .light-area {
@@ -97,64 +101,73 @@ h1 {
     position: relative;
 
     width: 360px;
+
     height: 360px;
 
-    margin: 20px auto 10px;
+    margin: 20px auto;
 
     display: flex;
 
     justify-content: center;
+
     align-items: center;
+
 }
 
 
-/* 外圍光暈 */
+/* 外部光暈 */
 
-.light-glow {
+.glow {
 
     position: absolute;
 
     width: 330px;
+
     height: 330px;
 
     border-radius: 50%;
 
-    background: transparent;
-
     opacity: 0;
 
-    transition:
-        opacity 0.05s linear,
-        transform 0.05s linear;
+    transition: opacity 0.05s;
 
-    pointer-events: none;
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.7),
+            rgba(255,255,255,0.2) 30%,
+            transparent 70%
+        );
+
+    filter: blur(10px);
+
 }
 
 
 /* 中央燈 */
 
-.lighthouse-light {
+.light {
 
     position: relative;
 
     width: 130px;
+
     height: 130px;
 
     border-radius: 50%;
 
-    background: #fcfdff;
+    background: #020407;
 
-    border: 3px solid #303b4a;
+    border: 3px solid #334155;
 
     box-shadow:
-        inset 0 0 30px rgba(255,255,1,30);
-
-    transition:
-        background 0.03s linear,
-        box-shadow 0.03s linear,
-        transform 0.03s linear;
+        inset 0 0 25px rgba(255,255,255,0.05);
 
     z-index: 2;
+
+    transition:
+        all 0.04s linear;
+
 }
 
 
@@ -162,79 +175,37 @@ h1 {
    白色閃光
 ========================= */
 
-.light-area.flash .lighthouse-light {
+.light-area.flash .light {
 
     background: #ffffff;
 
-    border-color: #ffffff;
+    border-color: white;
+
+    transform: scale(1.12);
 
     box-shadow:
 
-        0 0 10px #ffffff,
+        0 0 10px white,
 
-        0 0 25px #ffffff,
+        0 0 25px white,
 
-        0 0 50px #ffffff,
+        0 0 50px white,
 
-        0 0 90px #ffffff,
+        0 0 90px white,
 
-        0 0 150px #ffffff,
+        0 0 150px white,
 
-        0 0 230px rgba(255,255,255,0.95);
+        0 0 230px white;
 
-    transform: scale(1.12);
 }
 
 
-/* 外圍白光 */
-
-.light-area.flash .light-glow {
+.light-area.flash .glow {
 
     opacity: 1;
 
-    transform: scale(1.08);
+    transform: scale(1.1);
 
-    background:
-        radial-gradient(
-            circle,
-            rgba(255,255,255,0.55) 0%,
-            rgba(255,255,255,0.25) 20%,
-            rgba(255,255,255,0.08) 45%,
-            rgba(255,255,255,0.02) 65%,
-            transparent 75%
-        );
-
-    filter: blur(8px);
-}
-
-
-/* =========================
-   閃光動畫
-========================= */
-
-.light-area.flash {
-
-    animation: flashArea 1s ease-out;
-}
-
-
-@keyframes flashArea {
-
-    0% {
-        filter: brightness(2.2);
-    }
-
-    12% {
-        filter: brightness(1.7);
-    }
-
-    35% {
-        filter: brightness(1.2);
-    }
-
-    100% {
-        filter: brightness(1);
-    }
 }
 
 
@@ -244,35 +215,32 @@ h1 {
 
 .status {
 
-    min-height: 45px;
-
     font-size: 32px;
 
     font-weight: bold;
 
+    min-height: 45px;
+
     letter-spacing: 3px;
 
-    margin-top: 0;
-
-    transition: color 0.1s;
 }
 
 
-.status.flash-status {
+.status.flash {
 
-    color: #ffffff;
+    color: white;
 
     text-shadow:
-        0 0 10px #ffffff,
-        0 0 25px #ffffff;
+        0 0 10px white,
+        0 0 25px white;
+
 }
 
 
-.status.dark-status {
+.status.dark {
 
-    color: #718096;
+    color: #64748b;
 
-    text-shadow: none;
 }
 
 
@@ -282,19 +250,22 @@ h1 {
 
 .countdown {
 
-    margin-top: 5px;
+    margin-top: 8px;
 
-    color: #a9b6c7;
+    color: #aab7c8;
 
-    font-size: 18px;
+    font-size: 19px;
+
 }
 
 
 /* =========================
-   控制按鈕
+   按鈕
 ========================= */
 
 .controls {
+
+    margin: 25px 0;
 
     display: flex;
 
@@ -302,21 +273,16 @@ h1 {
 
     gap: 12px;
 
-    margin: 25px auto;
-
-    flex-wrap: wrap;
 }
 
 
 button {
 
-    min-width: 130px;
-
-    padding: 12px 22px;
-
     border: none;
 
     border-radius: 8px;
+
+    padding: 12px 25px;
 
     font-size: 16px;
 
@@ -324,33 +290,24 @@ button {
 
     cursor: pointer;
 
-    transition:
-        transform 0.15s,
-        opacity 0.15s;
-}
-
-
-button:hover {
-
-    transform: translateY(-2px);
-
-    opacity: 0.9;
 }
 
 
 .start {
 
-    background: #ffffff;
+    background: white;
 
-    color: #111111;
+    color: #111;
+
 }
 
 
 .reset {
 
-    background: #344256;
+    background: #334155;
 
-    color: #ffffff;
+    color: white;
+
 }
 
 
@@ -360,17 +317,16 @@ button:hover {
 
 .timeline {
 
-    width: 100%;
+    background: #111c2b;
 
-    background: rgba(17,29,45,0.9);
-
-    border: 1px solid #273548;
+    border: 1px solid #26364a;
 
     border-radius: 12px;
 
     padding: 20px;
 
     text-align: left;
+
 }
 
 
@@ -381,14 +337,13 @@ button:hover {
     font-size: 18px;
 
     font-weight: bold;
+
 }
 
 
-/* 時間軸 */
+/* 時間條 */
 
 .bar {
-
-    width: 100%;
 
     height: 50px;
 
@@ -397,18 +352,19 @@ button:hover {
     overflow: hidden;
 
     border-radius: 7px;
+
 }
 
 
-/* 亮1秒 */
+/* 1.5 秒亮 */
 
 .flash-block {
 
-    width: 3.333333%;
+    width: 10%;
 
-    background: #ffffff;
+    background: white;
 
-    color: #111111;
+    color: black;
 
     display: flex;
 
@@ -416,21 +372,20 @@ button:hover {
 
     justify-content: center;
 
-    font-size: 11px;
+    font-size: 12px;
 
     font-weight: bold;
+
 }
 
 
-/* 暗9秒 */
+/* 3 秒暗 */
 
-.dark-block {
+.dark3-block {
 
-    width: 30%;
+    width: 20%;
 
-    background: #273548;
-
-    color: ##bbccae;
+    background: #334155;
 
     display: flex;
 
@@ -438,78 +393,88 @@ button:hover {
 
     justify-content: center;
 
-    font-size: 11px;
+    font-size: 12px;
+
 }
 
 
-/* =========================
-   目前位置
-========================= */
+/* 9 秒暗 */
 
-.position-bar {
+.dark9-block {
 
-    position: relative;
+    width: 60%;
 
-    width: 100%;
+    background: #1e293b;
 
-    height: 6px;
+    display: flex;
 
-    background: #111827;
+    align-items: center;
 
-    border-radius: 5px;
+    justify-content: center;
+
+    font-size: 12px;
+
+}
+
+
+/* 進度 */
+
+.progress-area {
 
     margin-top: 12px;
 
+    height: 6px;
+
+    background: #020617;
+
+    border-radius: 5px;
+
     overflow: hidden;
+
 }
 
 
-.position {
-
-    position: absolute;
-
-    top: 0;
-
-    left: 0;
+.progress {
 
     width: 0%;
 
     height: 100%;
 
-    background: #ffffff;
+    background: white;
 
-    box-shadow: 0 0 8px #ffffff;
+    box-shadow: 0 0 10px white;
+
 }
 
 
 /* =========================
-   資訊卡
+   資訊
 ========================= */
 
 .info {
+
+    margin-top: 15px;
 
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-top: 15px;
 }
 
 
 .info-box {
 
-    background:
-        rgba(17,29,45,0.9);
+    background: #111c2b;
 
-    border:
-        1px solid #273548;
+    border: 1px solid #26364a;
 
     border-radius: 10px;
 
     padding: 15px;
+
 }
 
 
@@ -522,88 +487,95 @@ button:hover {
     font-size: 13px;
 
     margin-bottom: 5px;
+
 }
 
 
 .info-box strong {
 
-    font-size: 21px;
+    font-size: 20px;
+
 }
 
 
 /* =========================
-   手機版
+   手機
 ========================= */
 
 @media (max-width: 600px) {
 
-    .container {
-        padding: 20px 10px 30px;
-    }
-
     .light-area {
+
         width: 280px;
+
         height: 280px;
+
     }
 
-    .light-glow {
+    .glow {
+
         width: 260px;
+
         height: 260px;
+
     }
 
-    .lighthouse-light {
+    .light {
+
         width: 105px;
+
         height: 105px;
+
     }
 
     .status {
+
         font-size: 26px;
-    }
 
-    .info {
-        grid-template-columns: 1fr;
-    }
-
-    .timeline {
-        padding: 14px;
-    }
-
-    .bar {
-        height: 42px;
     }
 
     .controls {
+
         flex-direction: column;
+
     }
 
     button {
+
         width: 100%;
+
     }
+
+    .info {
+
+        grid-template-columns: 1fr;
+
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
+
 <div class="container">
 
 
-    <!-- =========================
-         標題
-    ========================== -->
+    <h1>⚓ 國聖燈塔聯閃光</h1>
 
-    <h1>⚓ 國聖燈塔白閃光</h1>
 
     <div class="subtitle">
-        Fl 1s — Oc 9s — Fl 1s — Oc 9s — Fl 1s — Oc 9s
+
+        Fl 1.5s — Oc 3s — Fl 1.5s — Oc 9s
+
     </div>
 
 
-    <!-- =========================
-         白色閃光燈
-    ========================== -->
+    <!-- 燈光 -->
 
     <div
         id="lightArea"
@@ -611,27 +583,28 @@ button:hover {
     >
 
         <div
-            id="lightGlow"
-            class="light-glow"
+            id="glow"
+            class="glow"
         ></div>
+
 
         <div
             id="light"
-            class="lighthouse-light"
+            class="light"
         ></div>
 
     </div>
 
 
-    <!-- =========================
-         狀態
-    ========================== -->
+    <!-- 狀態 -->
 
     <div
         id="status"
         class="status"
     >
+
         暫停
+
     </div>
 
 
@@ -639,13 +612,13 @@ button:hover {
         id="countdown"
         class="countdown"
     >
+
         等待開始
+
     </div>
 
 
-    <!-- =========================
-         控制
-    ========================== -->
+    <!-- 按鈕 -->
 
     <div class="controls">
 
@@ -653,66 +626,82 @@ button:hover {
             id="startBtn"
             class="start"
         >
+
             ▶ 開始
+
         </button>
+
 
         <button
             id="resetBtn"
             class="reset"
         >
+
             ↻ 重置
+
         </button>
 
     </div>
 
 
-    <!-- =========================
-         30秒時間軸
-    ========================== -->
+    <!-- 時間軸 -->
 
     <div class="timeline">
 
         <div class="timeline-title">
-            30 秒完整閃光週期
+
+            15 秒完整閃光週期
+
         </div>
 
 
         <div class="bar">
 
-            <div class="flash-block">
-                亮 1s
-            </div>
 
-            <div class="dark-block">
-                暗 9s
-            </div>
+            <!-- 0 ~ 1.5 -->
 
             <div class="flash-block">
-                亮 1s
+
+                Fl 1.5s
+
             </div>
 
-            <div class="dark-block">
-                暗 9s
+
+            <!-- 1.5 ~ 4.5 -->
+
+            <div class="dark3-block">
+
+                Oc 3s
+
             </div>
+
+
+            <!-- 4.5 ~ 6 -->
 
             <div class="flash-block">
-                亮 1s
+
+                Fl 1.5s
+
             </div>
 
-            <div class="dark-block">
-                暗 9s
+
+            <!-- 6 ~ 15 -->
+
+            <div class="dark9-block">
+
+                Oc 9s
+
             </div>
+
 
         </div>
 
 
-        <!-- 週期進度 -->
-
-        <div class="position-bar">
+        <div class="progress-area">
 
             <div
-                id="position"
-                class="position"
+                id="progress"
+                class="progress"
             ></div>
 
         </div>
@@ -720,20 +709,23 @@ button:hover {
     </div>
 
 
-    <!-- =========================
-         資訊
-    ========================== -->
+    <!-- 資訊 -->
 
     <div class="info">
 
+
         <div class="info-box">
 
             <span>
+
                 完整週期
+
             </span>
 
             <strong>
-                30 秒
+
+                15 秒
+
             </strong>
 
         </div>
@@ -742,11 +734,15 @@ button:hover {
         <div class="info-box">
 
             <span>
+
                 每週期閃光
+
             </span>
 
             <strong>
-                3 次
+
+                2 次
+
             </strong>
 
         </div>
@@ -755,28 +751,31 @@ button:hover {
         <div class="info-box">
 
             <span>
-                每次閃光
+
+                閃光時間
+
             </span>
 
             <strong>
-                1 秒
+
+                1.5 秒
+
             </strong>
 
         </div>
+
 
     </div>
+
 
 </div>
 
 
 <script>
 
-/* ==========================================
-   白色燈塔閃光控制
-========================================== */
-
-
-/* DOM */
+/* =========================================
+   DOM
+========================================= */
 
 const lightArea =
     document.getElementById("lightArea");
@@ -793,57 +792,53 @@ const startBtn =
 const resetBtn =
     document.getElementById("resetBtn");
 
-const position =
-    document.getElementById("position");
+const progress =
+    document.getElementById("progress");
 
 
-/* ==========================================
-   閃光參數
-========================================== */
+/* =========================================
+   閃光週期
+========================================= */
 
 
 /*
-    30秒一個完整週期
 
-    0  - 1 秒      亮
-    1  - 10 秒     暗
+   0 ～ 1.5 秒
+   亮
 
-    10 - 11 秒     亮
-    11 - 20 秒     暗
+   1.5 ～ 4.5 秒
+   暗
 
-    20 - 21 秒     亮
-    21 - 30 秒     暗
+   4.5 ～ 6 秒
+   亮
+
+   6 ～ 15 秒
+   暗
+
+
+   完整週期：
+   15 秒
+
 */
 
 
-const CYCLE = 30000;
+const CYCLE = 15000;
 
 
-/* 閃光區段 */
+/* 閃光區 */
 
-const flashPeriods = [
+const FLASH_1_START = 0;
 
-    {
-        start: 0,
-        end: 1000
-    },
+const FLASH_1_END = 1500;
 
-    {
-        start: 10000,
-        end: 11000
-    },
+const FLASH_2_START = 4500;
 
-    {
-        start: 20000,
-        end: 21000
-    }
-
-];
+const FLASH_2_END = 6000;
 
 
-/* ==========================================
+/* =========================================
    程式狀態
-========================================== */
+========================================= */
 
 let running = false;
 
@@ -854,102 +849,107 @@ let pausedTime = 0;
 let animationID = null;
 
 
-/* ==========================================
-   判斷目前是否亮燈
-========================================== */
+/* =========================================
+   判斷目前是否閃光
+========================================= */
 
-function isFlash(positionTime) {
+function isFlashing(t) {
 
-    return flashPeriods.some(period => {
+    return (
 
-        return (
-            positionTime >= period.start &&
-            positionTime < period.end
-        );
+        (
+            t >= FLASH_1_START &&
+            t < FLASH_1_END
+        )
 
-    });
+        ||
+
+        (
+            t >= FLASH_2_START &&
+            t < FLASH_2_END
+        )
+
+    );
 
 }
 
 
-/* ==========================================
+/* =========================================
    取得目前階段
-========================================== */
+========================================= */
 
-function getPhase(positionTime) {
+function getPhase(t) {
 
 
-    if (positionTime < 1000) {
+    /* 第一閃 */
+
+    if (t < 1500) {
 
         return {
+
             name: "白色閃光",
-            remain: 1000 - positionTime
+
+            remain: 1500 - t
+
         };
 
     }
 
 
-    if (positionTime < 10000) {
+    /* 暗3秒 */
+
+    if (t < 4500) {
 
         return {
+
             name: "暗燈",
-            remain: 10000 - positionTime
+
+            remain: 4500 - t
+
         };
 
     }
 
 
-    if (positionTime < 11000) {
+    /* 第二閃 */
+
+    if (t < 6000) {
 
         return {
+
             name: "白色閃光",
-            remain: 11000 - positionTime
+
+            remain: 6000 - t
+
         };
 
     }
 
 
-    if (positionTime < 20000) {
-
-        return {
-            name: "暗燈",
-            remain: 20000 - positionTime
-        };
-
-    }
-
-
-    if (positionTime < 21000) {
-
-        return {
-            name: "白色閃光",
-            remain: 21000 - positionTime
-        };
-
-    }
-
+    /* 暗9秒 */
 
     return {
 
         name: "暗燈",
 
-        remain:
-            30000 - positionTime
+        remain: 15000 - t
 
     };
 
 }
 
 
-/* ==========================================
-   更新動畫
-========================================== */
+/* =========================================
+   更新
+========================================= */
 
 function update() {
 
 
     if (!running) {
+
         return;
+
     }
 
 
@@ -961,37 +961,35 @@ function update() {
         now - startTime;
 
 
-    /*
-       取得目前30秒內的位置
-    */
+    /* 目前15秒位置 */
 
-    const positionTime =
+    const t =
         elapsed % CYCLE;
 
 
-    /* 判斷是否閃光 */
+    /* 是否閃光 */
 
     const flash =
-        isFlash(positionTime);
+        isFlashing(t);
 
 
-    /* 取得階段 */
+    /* 階段 */
 
     const phase =
-        getPhase(positionTime);
+        getPhase(t);
 
 
-    /* ======================================
+    /* =====================================
        白色閃光
-    ====================================== */
+    ===================================== */
 
     if (flash) {
 
         lightArea.classList.add("flash");
 
-        status.classList.remove("dark-status");
+        status.classList.add("flash");
 
-        status.classList.add("flash-status");
+        status.classList.remove("dark");
 
         status.textContent =
             "● 白色閃光";
@@ -1002,9 +1000,9 @@ function update() {
 
         lightArea.classList.remove("flash");
 
-        status.classList.remove("flash-status");
+        status.classList.remove("flash");
 
-        status.classList.add("dark-status");
+        status.classList.add("dark");
 
         status.textContent =
             "○ 暗燈";
@@ -1012,14 +1010,13 @@ function update() {
     }
 
 
-    /* ======================================
+    /* =====================================
        倒數
-    ====================================== */
+    ===================================== */
 
     const seconds =
-        Math.ceil(
-            phase.remain / 1000
-        );
+        (phase.remain / 1000)
+        .toFixed(1);
 
 
     countdown.textContent =
@@ -1029,21 +1026,18 @@ function update() {
         " 秒";
 
 
-    /* ======================================
-       30秒進度
-    ====================================== */
+    /* =====================================
+       進度條
+    ===================================== */
 
-    const progress =
-        (positionTime / CYCLE) * 100;
-
-
-    position.style.width =
-        progress + "%";
+    progress.style.width =
+        ((t / CYCLE) * 100) +
+        "%";
 
 
-    /* ======================================
-       繼續動畫
-    ====================================== */
+    /* =====================================
+       下一幀
+    ===================================== */
 
     animationID =
         requestAnimationFrame(update);
@@ -1051,28 +1045,22 @@ function update() {
 }
 
 
-/* ==========================================
+/* =========================================
    開始 / 暫停
-========================================== */
+========================================= */
 
 startBtn.addEventListener(
     "click",
     function() {
 
 
-        /* -------------------------
-           開始
-        ------------------------- */
+        /* 開始 */
 
         if (!running) {
 
 
             running = true;
 
-
-            /*
-               如果是第一次開始
-            */
 
             if (pausedTime === 0) {
 
@@ -1082,10 +1070,6 @@ startBtn.addEventListener(
             }
 
             else {
-
-                /*
-                   從暫停位置繼續
-                */
 
                 startTime =
                     performance.now()
@@ -1103,9 +1087,7 @@ startBtn.addEventListener(
         }
 
 
-        /* -------------------------
-           暫停
-        ------------------------- */
+        /* 暫停 */
 
         else {
 
@@ -1118,10 +1100,6 @@ startBtn.addEventListener(
             );
 
 
-            /*
-               記錄目前位置
-            */
-
             pausedTime =
                 performance.now()
                 - startTime;
@@ -1133,11 +1111,7 @@ startBtn.addEventListener(
 
 
             status.classList.remove(
-                "flash-status"
-            );
-
-            status.classList.add(
-                "dark-status"
+                "flash"
             );
 
 
@@ -1158,9 +1132,9 @@ startBtn.addEventListener(
 );
 
 
-/* ==========================================
+/* =========================================
    重置
-========================================== */
+========================================= */
 
 resetBtn.addEventListener(
     "click",
@@ -1186,12 +1160,12 @@ resetBtn.addEventListener(
 
 
         status.classList.remove(
-            "flash-status"
+            "flash"
         );
 
 
         status.classList.remove(
-            "dark-status"
+            "dark"
         );
 
 
@@ -1203,7 +1177,7 @@ resetBtn.addEventListener(
             "等待開始";
 
 
-        position.style.width =
+        progress.style.width =
             "0%";
 
 
@@ -1213,24 +1187,10 @@ resetBtn.addEventListener(
     }
 );
 
-
-/* ==========================================
-   頁面載入
-========================================== */
-
-window.addEventListener(
-    "load",
-    function() {
-
-        lightArea.classList.remove(
-            "flash"
-        );
-
-    }
-);
-
 </script>
 
+
 </body>
+
 </html>
 
